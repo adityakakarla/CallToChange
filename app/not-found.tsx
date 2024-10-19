@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
-export default function VideoWithOverlay() {
-  return (
-    <div className="relative w-full h-screen overflow-hidden">
+export default function NotFound() {
+    return (
+        <div className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -21,13 +21,16 @@ export default function VideoWithOverlay() {
         </video>
       </div>
       <div className="absolute bottom-40 left-20 text-white text-8xl z-10 space-y-5">
-        <h1>Carbon-Neutral LLM Apps.</h1>
-        <h1>Built With CallToChange.</h1>
+        <h1>Congratulations! You Broke Our Website.</h1>
         <div className="flex flex-row space-x-5 pt-10">
-          <Button className="bg-white hover:bg-green-200 transition duration-300 ease-in-out text-black rounded-full py-8 px-12 text-lg">View Demo</Button>
-          <Button className="bg-transparent border border-white text-white transition duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 rounded-full py-8 px-12 text-lg">Get Started</Button>
+            
+          <Button className="bg-white hover:bg-green-200 transition duration-300 ease-in-out text-black rounded-full py-8 px-12 text-lg" asChild>
+          <Link href='/'>
+          Go Home
+          </Link>
+          </Button>
         </div>
       </div>
     </div>
-  );
+    )
 }

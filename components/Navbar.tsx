@@ -19,10 +19,18 @@ export const Navbar = () => {
                 <div className="flex justify-between items-center space-x-8 bg-white rounded-full shadow-2xl py-3 px-8 w-fit h-14">
                     <NavigationMenu>
                         <NavigationMenuList>
-                        <NavigationMenuItem>
+
+                            <NavigationMenuItem>
                                 <Link href="/" legacyBehavior passHref>
                                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                         Home
+                                    </NavigationMenuLink>
+                                </Link>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <Link href="/dashboard" legacyBehavior passHref>
+                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                        Dashboard
                                     </NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
@@ -48,16 +56,16 @@ export const Navbar = () => {
                                 </Link>
                             </NavigationMenuItem>
                             <SignedOut>
-                            <NavigationMenuItem>
-                                <Link href="/sign-up" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Get Started
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/sign-up" legacyBehavior passHref>
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                            Get Started
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
                             </SignedOut>
                             <SignedIn>
-                                <UserButton/>
+                                <UserButton />
                             </SignedIn>
                         </NavigationMenuList>
                     </NavigationMenu>

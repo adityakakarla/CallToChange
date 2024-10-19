@@ -24,7 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${quicksand.variable} antialiased bg-[#1b362b] min-h-screen`}
+          className={`${quicksand.variable} antialiased bg-[#204544] min-h-screen`}
           style={{ fontFamily: 'var(--font-quicksand)' }}
         >
           <Navbar />

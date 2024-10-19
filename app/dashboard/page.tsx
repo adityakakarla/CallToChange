@@ -9,6 +9,7 @@ import {
 import ValueCard from "@/components/ValueCard";
 import { SignedOut } from "@clerk/nextjs";
 import { MetroSpinner } from 'react-spinners-kit'
+import { redirect } from "next/navigation";
 
 export default function Page() {
     const [textCalls, setTextCalls] = useState(0);
@@ -17,7 +18,6 @@ export default function Page() {
     const [offsetCost, setOffsetCost] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
-    const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
         async function setUserInfo() {
@@ -37,7 +37,6 @@ export default function Page() {
                     setImageCalls(imageCalls);
                     setEmissions(emissions);
                     setOffsetCost(offsetCost);
-                    setShowContent(true);
                 }
             } catch (error) {
                 setError("Woah. Something happened");
@@ -49,6 +48,10 @@ export default function Page() {
 
         setUserInfo();
     }, []);
+
+    if (error) {
+        redirect('/error')
+    }
 
     return (
         <div className="text-white h-screen relative w-full overflow-hidden">

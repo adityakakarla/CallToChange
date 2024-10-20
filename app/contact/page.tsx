@@ -26,9 +26,9 @@ export default function Contact() {
         <h1 className="text-2xl">Reach us at adi[at]adikakarla[dot]com</h1>
         <div className="flex flex-row space-x-5 pt-10">
           <Button className="bg-white hover:bg-green-200 transition duration-300 ease-in-out text-black rounded-full py-8 px-12 text-lg" asChild>
-          <Link href='/demo'>
+          <a href='https://youtu.be/TMWhvw60K70'>
           View Demo
-          </Link>
+          </a>
           </Button>
           <Button className="bg-transparent border border-white text-white transition duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 rounded-full py-8 px-12 text-lg">
           <Link href='/sign-up'>

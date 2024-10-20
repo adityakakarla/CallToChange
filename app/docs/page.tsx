@@ -63,7 +63,7 @@ print(response.choices[0].message.content)`}
                             <p>Clerk for user authentication</p>
                         </li>
                         <li>
-                            <p>Ripple for smart contract management</p>
+                            <p>SUI for carbon offset transactions</p>
                         </li>
                         <li>
                             <p>SingleStore for blazingly fast data updates</p>

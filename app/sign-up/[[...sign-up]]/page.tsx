@@ -20,7 +20,7 @@ export default function Page() {
       </video>
     </div>
     <div className="absolute top-60 left-1/2 -translate-x-1/2 text-white text-8xl z-10 space-y-5">
-  <SignUp/>
+  <SignUp forceRedirectUrl={'/dashboard'}/>
 </div>
   </div>
     )

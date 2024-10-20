@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function VideoWithOverlay() {
   return (
@@ -23,9 +24,16 @@ export default function VideoWithOverlay() {
         <h1>Carbon-Neutral LLM Apps.</h1>
         <h1>Built With CallToChange.</h1>
         <div className="flex flex-row space-x-5 pt-10">
-          <Button className="bg-white hover:bg-green-200 transition duration-300 ease-in-out text-black rounded-full py-8 px-12 text-lg">View Demo</Button>
-          <Button className="bg-transparent border border-white text-white transition duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 rounded-full py-8 px-12 text-lg">Get Started</Button>
-        </div>
+        <Button className="bg-white hover:bg-green-200 transition duration-300 ease-in-out text-black rounded-full py-8 px-12 text-lg" asChild>
+          <Link href='/demo'>
+          View Demo
+          </Link>
+          </Button>
+          <Button className="bg-transparent border border-white text-white transition duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 rounded-full py-8 px-12 text-lg">
+          <Link href='/sign-up'>
+          Get Started
+          </Link>
+          </Button>        </div>
       </div>
     </div>
   );

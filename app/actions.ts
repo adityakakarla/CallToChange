@@ -2,6 +2,7 @@
 
 import { getUserInfo } from "@/scripts/mongo";
 import { currentUser } from "@clerk/nextjs/server";
+import { XRP } from "xrpl"
 
 export async function fetchUserInfo() {
     const user = await currentUser();

@@ -3,7 +3,6 @@ import { Quicksand } from "next/font/google"; // Import Quicksand
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
-import { WalletProvider} from '@suiet/wallet-kit'
 import '@suiet/wallet-kit/style.css';
 
 const quicksand = Quicksand({
